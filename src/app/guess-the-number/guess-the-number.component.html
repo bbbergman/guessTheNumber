@@ -1,0 +1,27 @@
+<div class="container">
+  <div *ngIf="serverError">
+    <h3 id="error"> Error!<br>Error in server..<br><br>server error message:<br>{{this.errorMessage}}<br><br>please try again later</h3>
+    <img src="https://blog.sqlauthority.com/i/a/errorstop.png" alt="error" height="80" width="80">
+  </div>
+  <div *ngIf="!serverError">
+<h1 id="title">Guess the number game</h1>
+  <h3 id="gameOutput">{{gameOutput}}</h3>
+  <div *ngIf="!numberFound &&loadedMinAndMax">
+  <div class="row">
+  <button *ngIf="!userPickNumber" id="startButton"
+          (click)="userChooseNumber()">I thought of a number</button>
+  <button *ngIf="userPickNumber" class=lowerHigherButtons
+          (click)="numberIsLower()">My number is lower <span class="glyphicon glyphicon-arrow-down"></span></button>
+  <button *ngIf="userPickNumber" class=lowerHigherButtons
+          (click)="numberIsBigger()">My number is bigger <span class="glyphicon glyphicon-arrow-up"></span></button>
+  </div>
+  <div class="row">
+  <button *ngIf="userPickNumber" id=yellowButton (click)=foundTheNumber()>That's my number! </button>
+</div>
+</div>
+  <div *ngIf="numberFound" class="row">
+    <button  id="endButton" (click)="restartGame()">Play again</button>
+</div>
+  </div>
+  <div (window:beforeunload)="onRefresh()"></div>
+</div>

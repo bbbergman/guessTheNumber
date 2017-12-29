@@ -1,0 +1,64 @@
+.container{
+  text-align: center;
+}
+#error{
+  color:red;
+  margin-top: 40px;
+  text-align: center;
+  font-weight: bold;
+}
+#title{
+  color: #045ae1;
+  margin-top: 100px;
+  text-align: center;
+  font-weight: bold;
+}
+#gameOutput{
+  margin-top: 100px;
+  font-weight: bold;
+}
+#startButton{
+  background-color: limegreen;
+  font-weight: bold;
+  margin-top: 450px;
+  padding: 10px 20px;
+  border: 1px solid black;
+}
+#endButton{
+  background-color: limegreen;
+  font-weight: bold;
+  margin-top: 450px;
+  padding: 10px 80px;
+  border: 1px solid black;
+}
+.lowerHigherButtons{
+  background-color: limegreen;
+  font-weight: bold;
+  margin-top: 350px;
+  margin-right: 20px;
+  padding: 15px 30px;
+  border: 1px solid black;
+}
+#yellowButton{
+  background-color: yellow;
+  font-weight: bold;
+  margin-top: 15px;
+  padding: 15px 30px;
+  border: 1px solid black;
+}
+@media screen and (max-width: 1280px)
+and (max-height: 850px){
+ .container{
+   position: fixed;
+   padding:0;
+   margin:0;
+
+   top:0;
+   left:0;
+
+   width: 100%;
+   height: 100%;
+    overflow:scroll;
+  }
+}
+
